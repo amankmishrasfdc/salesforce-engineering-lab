@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Rich Text Character Counter">
+        <div class="slds-p-around_medium">
+            <lightning-input-rich-text
+                value={value}
+                oninput={handleRichTextChange}
+                onchange={handleRichTextChange}
+                label="Description">
+            </lightning-input-rich-text>
+
+            <div class="slds-m-top_small slds-text-body_small slds-text-color_weak">
+                {counterText}
+            </div>
+        </div>
+    </lightning-card>
+</template>
