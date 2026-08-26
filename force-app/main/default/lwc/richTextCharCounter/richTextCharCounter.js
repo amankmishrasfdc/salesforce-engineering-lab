@@ -7,16 +7,13 @@ export default class RichTextCharCounter extends LightningElement {
     lastValidValue = '';
     charCount = 0;
 
-   get valueLength() {
-        return this.charCount;
-    }
-    get remainingChars() {
-        return MAX_LENGTH - this.charCount;
-    }
-    get counterText() {
+get remainingChars() {
+    return MAX_LENGTH - this.charCount;
+}
 
-        return ` ${this.remainingChars} / ${MAX_LENGTH}`;
-    }
+get counterText() {
+    return `${this.remainingChars} / ${MAX_LENGTH}`;
+}
 
     handleRichTextChange(event) {
         const raw = event?.detail?.value ?? event?.target?.value ?? '';
